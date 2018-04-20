@@ -6,6 +6,7 @@ var request= require('request')
 var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
 var Twitter = require('twitter');
+var fs = require('fs');
 var spotify = new Spotify(keys.spotify);
 
 //Stored arguemtn's array
@@ -42,7 +43,7 @@ var artistName = function(artist) {
     return artist.name;
 }
 var spotifyMe = function(songName){
-    spotify.search({ type: 'track', query: songName }, function(err, data) {
+    spotify.search({ type: 'track', query: songName, limit:1 }, function(err, data) {
         if (err) {
          console.log('Error occurred: ' + err);
           return;
@@ -63,10 +64,12 @@ var spotifyMe = function(songName){
 
 }
 var MovieMe = function(movieName){
-    request('http://www.omdbapi.com/?apikey=trilogy&t=pulp+fiction&y=&plot=short&r=json', function (error, response, body){
-if (!error && response.statusCode == 200) {
+    var omdbURL = 'http://www.omdbapi.com/?apikey=trilogy&t='+ movieName + '&plot=short&tomatoes=true';
     
-    var jsonData = JSON.parse(body);
+    request(omdbURL, function (error, response, body){
+        if(!error && response.statusCode == 200){
+          var jsonData = JSON.parse(body);
+    
 
     console.log('Title: ' +jsonData.Title);
     console.log('Year: '+jsonData.Year);
@@ -78,7 +81,21 @@ if (!error && response.statusCode == 200) {
     console.log('Rotten tomatoes rating: '+ jsonData.tomatoRating);
 
     }
-})
+});
+    
+}
+var whatItSays = function(){
+    fs.readFile('random.txt', 'utf8', (err, data) => {
+        if (err) throw err;
+      
+        var dataArray = data.split(',');
+
+        if (dataArray.length == 2) {
+            picks(dataArray[0], dataArray[1]);
+        } else if (dataArray.length == 1) {
+            picks(dataArray[0]);
+        }
+      });
     
 }
 
@@ -89,8 +106,6 @@ var picks = function(caseData, functionData){
     switch(caseData){
         case 'my-tweets' :
         getMyTweets();
-        default:
-        console.log('LIRI does not know that');
         break;
         
         case 'spotify-this-song':
@@ -105,8 +120,12 @@ var picks = function(caseData, functionData){
         } else {
             movieMe("Mr. Nobody")
         }
-
-       
+        break;
+        case 'do-what-it-says':
+        whatItSays();
+        break;
+        default:
+        console.log('LIRI does not know that');
     }
 }
 
