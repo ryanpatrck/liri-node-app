@@ -1,39 +1,39 @@
 # liri-node-app
- Week 10 (LIRI Bot) Assignment
+### LIRI Bot Assignment
  
  LIRI is a command line node app that takes in parameters and returns data based on one of four commands:
  
- my-tweets 
- spotify-this-song 
- movie-this 
- do-what-it-says 
+* my-tweets 
+ *spotify-this-song 
+ *movie-this 
+ *do-what-it-says 
  
- What Each Command Does
+ ### What Each Command Does
  
  -node liri.js my-tweets:
  Displays my last 20 tweets and when they were created in terminal/bash window.
 ![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/tweets.png)
  
  -node liri.js spotify-this-song <song name>:
- Shows the following information about the song in terminal/bash window.
- Artist(s)
- The song's name
- A preview link of the song from Spotify
- The album that the song is from
- Or if no song is passed through, it will default to *"The Sign" by Ace of Base
+ *Shows the following information about the song in terminal/bash window.
+ *Artist(s)
+ *The song's name
+ *A preview link of the song from Spotify
+ *The album that the song is from
+ *Or if no song is passed through, it will default to *"The Sign" by Ace of Base
 ![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/spotify.png)
  
  -node liri.js movie-this <movie name>:
- Shows the following information in terminal/bash.
- Title of the movie.
- Year the movie came out.
- IMDB Rating of the movie.
- Country where the movie was produced.
- Language of the movie.
- Plot of the movie.
- Actors in the movie.
- Rotten Tomatoes Rating.
- Or if no movie is passed through, it will default to "Mr. Nobody" 
+ *Shows the following information in terminal/bash.
+ *Title of the movie.
+ *Year the movie came out.
+ *IMDB Rating of the movie.
+ *Country where the movie was produced.
+ *Language of the movie.
+ *Plot of the movie.
+ *Actors in the movie.
+ *Rotten Tomatoes Rating.
+ *Or if no movie is passed through, it will default to "Mr. Nobody" 
 ![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/movies.png)
  
  -node liri.js do-what-it-says:
@@ -41,13 +41,13 @@
 ![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/itsays.png)
  Tech used
  
- Node.js
+ ### Node.js
  Twitter NPM Package - https://www.npmjs.com/package/twitter
  Spotify NPM Package - https://www.npmjs.com/package/spotify
  Request NPM Package - https://www.npmjs.com/package/request
 
 
-Built With
+### Built With
 Visual Studio - Text Editor
 
  
