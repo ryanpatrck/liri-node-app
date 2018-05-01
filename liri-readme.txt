@@ -12,7 +12,7 @@
  
  -node liri.js my-tweets:
  Displays my last 20 tweets and when they were created in terminal/bash window.
-<img src="tweets.png" alt="Tweets">
+![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/tweets.png)
  
  -node liri.js spotify-this-song <song name>:
  *Shows the following information about the song in terminal/bash window.
@@ -21,7 +21,7 @@
  *A preview link of the song from Spotify
  *The album that the song is from
  *Or if no song is passed through, it will default to *"The Sign" by Ace of Base
-<img src="Spotify.png" alt="Spotify">
+![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/spotify.png)
  
  -node liri.js movie-this <movie name>:
  *Shows the following information in terminal/bash.
@@ -34,11 +34,11 @@
  *Actors in the movie.
  *Rotten Tomatoes Rating.
  *Or if no movie is passed through, it will default to "Mr. Nobody" 
-<img src="Movies.png" alt="Movies">
+![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/movies.png)
  
  -node liri.js do-what-it-says:
  Takes the text from random.txt and runs the song through spotify-this-song command
-<img src="itsays.png" alt="ItSays">
+![alt text](https://raw.githubusercontent.com/ryanpatrck/liri-node-app/branch/path/to/itsays.png)
  Tech used
  
  ### Node.js
@@ -52,4 +52,3 @@ Visual Studio - Text Editor
 
  
  
-
